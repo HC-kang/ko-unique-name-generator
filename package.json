@@ -1,6 +1,6 @@
 {
   "name": "ko-unique-name-generator",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Generate Korean adjective-animal based unique names",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
