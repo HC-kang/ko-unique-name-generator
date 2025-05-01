@@ -19,14 +19,22 @@ npm install ko-unique-name-generator
 ### 기본 사용
 
 ```ts
+// ESM
 import { generateKoreanName } from 'ko-unique-name-generator';
 
 const name = generateKoreanName();
 console.log(name); // 예: '귀여운-수달-1230'
 ```
 
----
+```ts
+// CJS
+const { generateKoreanName } = require('ko-unique-name-generator');
 
+const name = generateKoreanName();
+console.log(name); // 예: '귀여운-수달-1230'
+```
+
+---
 ## 📦 반환 포맷
 
 기본적으로 `"형용사-동물-0000"` 형태의 문자열을 반환합니다.
