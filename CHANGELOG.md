@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/HC-kang/ko-unique-name-generator/compare/v1.2.0...v1.3.0) (2025-05-01)
+
+
+### Features
+
+* 모듈 크기 개선을 위한 구조 변경 ([7c5392a](https://github.com/HC-kang/ko-unique-name-generator/commit/7c5392ae78566cc6dd62fda2c19a2fa653349f25))
+
+
+
 # [1.2.0](https://github.com/HC-kang/ko-unique-name-generator/compare/v1.1.1...v1.2.0) (2025-05-01)
 
 
