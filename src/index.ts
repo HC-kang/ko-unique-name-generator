@@ -7,8 +7,8 @@ function getRandom<T>(arr: T[]): T {
 
 export function generateKoreanName(): string {
   return `${getRandom(adjectives)}-${getRandom(animals)}-${Math.floor(
-    Math.random() * 1000
+    Math.random() * 10000
   )
     .toString()
-    .padStart(3, '0')}`;
+    .padStart(4, '0')}`;
 }
