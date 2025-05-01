@@ -1,0 +1,25 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript build output
+dist/
+
+# Ship.js temp
+release-scripts/
+
+# Environment files (optional)
+.env
+.env.*
+
+# VSCode config (optional)
+.vscode/
+
+# macOS
+.DS_Store
+
+# Test output (optional)
+coverage/

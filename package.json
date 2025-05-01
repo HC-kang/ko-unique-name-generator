@@ -1,0 +1,39 @@
+{
+  "name": "ko-unique-name-generator",
+  "version": "1.0.0",
+  "description": "Generate Korean adjective-animal based unique names",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs",
+    "types": "./dist/index.d.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "test": "node dist/index.cjs"
+  },
+  "keywords": [
+    "korean",
+    "id",
+    "name",
+    "generator",
+    "unique",
+    "nickname"
+  ],
+  "author": "heechankang",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
+    "rollup": "^4.40.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "shipjs": "^0.27.0",
+    "typescript": "^5.8.3"
+  }
+}
