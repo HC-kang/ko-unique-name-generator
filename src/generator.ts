@@ -1,7 +1,7 @@
 import type { KoreanNameOptions } from './types/KoreanNameOptions';
 
-import { adjectives } from './adjectives';
-import { animals } from './animals';
+import { adjectives } from './adjectives.js';
+import { animals } from './animals.js';
 
 const getRandom = <T>(arr: T[]): T =>
   arr[Math.floor(Math.random() * arr.length)];

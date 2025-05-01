@@ -1,5 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
+import copy from 'rollup-plugin-copy';
 
 /** @type {import('rollup').RollupOptions[]} */
 export default [
@@ -18,11 +19,23 @@ export default [
         sourcemap: false,
       }
     ],
+    external: [
+      './adjectives.js',
+      './animals.js'
+    ],
     plugins: [
       typescript({
         tsconfig: './tsconfig.json',
         declaration: false,
         declarationDir: null
+      }),
+      copy({
+        targets: [
+          { src: 'src/adjectives.ts', dest: 'dist', rename: 'adjectives.js' },
+          { src: 'src/animals.ts', dest: 'dist', rename: 'animals.js' },
+        ],
+        verbose: true,
+        hook: 'writeBundle'
       })
     ]
   },

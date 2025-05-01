@@ -8,4 +8,8 @@ module.exports = {
   },
   testMatch: ['**/*.spec.ts'],
   moduleFileExtensions: ['ts', 'js'],
+  moduleNameMapper: { // This is needed to handle the .js imports in the test files
+    '^\\./adjectives\\.js$': '<rootDir>/src/adjectives.ts',
+    '^\\./animals\\.js$': '<rootDir>/src/animals.ts',
+  },
 };
