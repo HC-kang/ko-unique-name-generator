@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/HC-kang/ko-unique-name-generator/compare/v1.1.1...v1.2.0) (2025-05-01)
+
+
+### Features
+
+* 형용사와 동물이름 보강, README에 고유값의 수 명시 ([c281177](https://github.com/HC-kang/ko-unique-name-generator/commit/c281177b7546a7dd7ae3dc1c9b381f85fc22d6a1))
+
+
+
 ## [1.1.1](https://github.com/HC-kang/ko-unique-name-generator/compare/v1.1.0...v1.1.1) (2025-05-01)
 
 
