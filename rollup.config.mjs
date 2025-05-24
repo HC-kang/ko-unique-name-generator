@@ -1,46 +1,56 @@
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
-import copy from 'rollup-plugin-copy';
 
 /** @type {import('rollup').RollupOptions[]} */
 export default [
-  // 1. 코드 빌드 (CJS + ESM)
+  // 1. 모든 것을 ESM으로 빌드 (데이터 + 메인)
   {
-    input: 'src/index.ts',
-    output: [
-      {
-        file: 'dist/index.cjs',
-        format: 'cjs',
-        sourcemap: false,
+    input: {
+      index: 'src/index.ts',
+      adjectives: 'src/adjectives.ts',
+      animals: 'src/animals.ts'
+    },
+    output: {
+      dir: 'dist',
+      format: 'es',
+      entryFileNames: (chunkInfo) => {
+        return chunkInfo.name === 'index' ? 'index.mjs' : '[name].js';
       },
-      {
-        file: 'dist/index.mjs',
-        format: 'es',
-        sourcemap: false,
-      }
-    ],
-    external: [
-      './adjectives.js',
-      './animals.js'
-    ],
+      sourcemap: false,
+    },
     plugins: [
       typescript({
         tsconfig: './tsconfig.json',
         declaration: false,
         declarationDir: null
-      }),
-      copy({
-        targets: [
-          { src: 'src/adjectives.ts', dest: 'dist', rename: 'adjectives.js' },
-          { src: 'src/animals.ts', dest: 'dist', rename: 'animals.js' },
-        ],
-        verbose: true,
-        hook: 'writeBundle'
       })
     ]
   },
 
-  // 2. 타입 정의 병합
+  // 2. 모든 것을 CJS로 빌드 (데이터 + 메인)
+  {
+    input: {
+      index: 'src/index.ts',
+      adjectives: 'src/adjectives.ts',
+      animals: 'src/animals.ts'
+    },
+    output: {
+      dir: 'dist',
+      format: 'cjs',
+      entryFileNames: '[name].cjs',
+      sourcemap: false,
+      exports: 'named'
+    },
+    plugins: [
+      typescript({
+        tsconfig: './tsconfig.json',
+        declaration: false,
+        declarationDir: null
+      })
+    ]
+  },
+
+  // 3. 타입 정의 생성
   {
     input: 'src/index.ts',
     output: {
