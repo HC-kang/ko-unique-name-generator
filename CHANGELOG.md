@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/HC-kang/ko-unique-name-generator/compare/v1.3.1...v1.4.0) (2025-05-24)
+
+
+### Features
+
+* Rollup 설정 변경으로 ESM 및 CJS 개별 빌드 ([e0972a7](https://github.com/HC-kang/ko-unique-name-generator/commit/e0972a70e1fa1c9660213119e2057eb851022ee5))
+
+
+
 ## [1.3.1](https://github.com/HC-kang/ko-unique-name-generator/compare/v1.3.0...v1.3.1) (2025-05-01)
 
 
